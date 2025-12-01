@@ -1,0 +1,167 @@
+/* -------------------------
+   GLOBAL STYLES (Christmas Theme)
+-------------------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fdf7f3; /* warm winter background */
+  color: #2c2c2c;
+}
+
+:root {
+  --christmas-red: #c62828;
+  --christmas-green: #1b5e20;
+  --gold: #d4af37;
+  --snow-white: #ffffff;
+}
+
+/* -------------------------
+   HERO SECTION
+-------------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+  filter: brightness(65%); /* makes text pop */
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  color: var(--snow-white);
+  text-shadow: 0px 0px 10px #000;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* -------------------------
+   SECTION STYLING
+-------------------------- */
+section {
+  padding: 50px 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--christmas-red);
+  position: relative;
+}
+
+h2::after {
+  content: '⭐';
+  display: block;
+  color: var(--gold);
+  margin: 6px auto;
+}
+
+/* -------------------------
+   DETAIL BOX
+-------------------------- */
+.details .detail-box {
+  background: var(--snow-white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--christmas-green);
+  border-right: 6px solid var(--christmas-red);
+}
+
+/* -------------------------
+   RSVP FORM
+-------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--christmas-green);
+  background: #fff;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  background: var(--christmas-red);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(198, 40, 40, 0.3);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: var(--christmas-green);
+  color: white;
+}
+
+/* -------------------------
+   SNOW EFFECT (Subtle)
+-------------------------- */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('assets/snowflake.jpg');
+  opacity: 0.15; /* subtle snow */
+  animation: snowfall 12s linear infinite;
+}
+
+@keyframes snowfall {
+  from { background-position: 0 -200px; }
+  to { background-position: 0 200px; }
+}
+
+/* -------------------------
+   RESPONSIVENESS
+-------------------------- */
+@media (max-width: 768px) {
+  .banner-img {
+    height: 40vh;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+}
