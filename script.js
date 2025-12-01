@@ -3,9 +3,7 @@ document.getElementById("rsvp-form").addEventListener("submit", (e) => {
   e.preventDefault();
   alert("🎉 Your RSVP has been recorded!");
 });
-/* -----------------------------
-   Real Snow Animation
------------------------------ */
+
 const canvas = document.getElementById("snow");
 const ctx = canvas.getContext("2d");
 
@@ -60,3 +58,4 @@ function moveFlakes() {
 
 createFlakes();
 setInterval(drawFlakes, 33);
+
